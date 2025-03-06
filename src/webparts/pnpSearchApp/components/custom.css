@@ -1,0 +1,36 @@
+.coverEntireBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+.headingdiv {
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.coversiteDocuments{
+    width: 100%;
+    display: flex;
+}
+.docsdiv1 {
+    width: 15%;
+    margin-right: 15px;
+}
+.docsdiv2 {
+    width: 50%;
+}
+.CanvasZoneSectionContainer {
+    margin: 0px;
+    width: 100%;
+    max-width: 100vw !important;
+    display: flex;
+    justify-content: center;
+    background: #DEDEDE;
+}
+.coverEntireBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 15px;
+}

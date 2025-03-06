@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "14.15.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.1",
+    "libraryName": "pnp-search-app",
+    "libraryId": "fadcaa30-e196-44da-971e-6dcccf350c5e",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-search-app",
+    "solutionShortDescription": "pnp-search-app description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
