@@ -16,11 +16,11 @@ const DataGridView = (props: any) => {
 
   const fetchFav = async() => {
     const web = Web(context.pageContext.site.absoluteUrl);
-    const docData: any = await web.lists.getByTitle("Documents").items.select('SiteId,FileRef,FileLeafRef,ID').orderBy('SiteId', true).get();
+    const docData: any = await web.lists.getByTitle("Documents").items.select('ReportType,SiteId,FileRef,FileLeafRef,ID').orderBy('SiteId', true).get();
     console.log(docData);
     const uniqueData: string | any[] = [];
     const uniqueDpData: string | any[] = [];
-    docData.forEach((element: { SiteId: any; }) => {
+    docData.forEach((element: any) => {
       if(uniqueData.indexOf(element.SiteId) === -1){
         uniqueData.push(element.SiteId);
         uniqueDpData.push({
@@ -37,11 +37,22 @@ const DataGridView = (props: any) => {
     console.log(sd);
     setselectedLink(null);
     const filteredDocs: React.SetStateAction<any[]> = [];
-    docDetails.forEach((element: { SiteId: any; ID: any; FileLeafRef: any; }) => {
-      if(element.SiteId === sd.value){
+    let groupBox: any = [];
+    docDetails.forEach((element: any) => {
+      let groupLabel: any = [];
+      if(element.SiteId === sd.value && groupBox.indexOf(element.ReportType) === -1){
+        groupBox.push(element.ReportType);
+        docDetails.forEach((innrelement: any) => {
+          if(innrelement.ReportType === element.ReportType && innrelement.SiteId === sd.value){
+            groupLabel.push({
+              value: element.ID,
+              label: element.FileLeafRef
+            });
+          }
+        });
         filteredDocs.push({
-          value: element.ID,
-          label: element.FileLeafRef
+          label: element.ReportType,
+          options: groupLabel
         })
       }
     });
