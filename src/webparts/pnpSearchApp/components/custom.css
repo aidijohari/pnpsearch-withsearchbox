@@ -81,7 +81,7 @@ input.dropdownInput {
     padding: 2px 8px;
     cursor: default;
     display: -webkit-box;
-    display: -webkit-flex;
+    /* display: -webkit-flex; */
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex-wrap: wrap;
