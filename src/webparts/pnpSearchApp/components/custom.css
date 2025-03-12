@@ -82,7 +82,7 @@ input.dropdownInput {
     cursor: default;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -ms-flexbox;
+    /* display: -ms-flexbox; */
     display: flex;
     -webkit-box-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
